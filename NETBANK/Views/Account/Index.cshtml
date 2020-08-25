@@ -1,0 +1,14 @@
+﻿@using NETBANK.Models
+@model IEnumerable<Account>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Account </h2>
+
+<ul>
+    @foreach (Account acc in Model)
+    {
+        <li> @Html.ActionLink(acc.Name, "Details", new { Id = acc.BankId }) </li>
+    }
+</ul>

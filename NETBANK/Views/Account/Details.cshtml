@@ -1,0 +1,58 @@
+﻿@using NETBANK.Models;
+@model NETBANK.Models.Account
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Index</h2>
+@*
+    @model  IEnumerable<NETBANK.Models.Account>
+<ul>
+    @foreach (Account emp in Model)
+    {
+        <li> @Html.ActionLink(emp.Name, "Index", new { @id = emp.CardNumber }) </li>
+    }
+
+</ul>
+    *@
+
+<table style="font-family:Arial">
+    <tr>
+        <td>
+            Card Number:
+        </td>
+        <td>
+            @Model.CardNumber 
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Name :
+        </td>
+        <td>
+            @Model.Name
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            Card Type :
+        </td>
+        <td>
+            @Model.CardType
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            Cash :
+        </td>
+        <td>
+            @Model.Cash $
+        </td>
+
+    </tr>
+
+</table>
